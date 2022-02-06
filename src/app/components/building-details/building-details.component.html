@@ -1,0 +1,125 @@
+<div>
+  <div *ngIf="currentBuilding.id" class="edit-form">
+    <h4>Building</h4>
+    <form>
+      <div class="form-group">
+        <label for="id">Id</label>
+        <input
+          type="text"
+          class="form-control"
+          id="id"
+          [(ngModel)]="currentBuilding.id"
+          name="id"
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="currentBuilding.name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="street">Street</label>
+        <input
+          type="text"
+          class="form-control"
+          id="street"
+          [(ngModel)]="currentBuilding.street"
+          name="street"
+        />
+      </div>
+      <div class="form-group">
+        <label for="number">Number</label>
+        <input
+          type="text"
+          class="form-control"
+          id="number"
+          [(ngModel)]="currentBuilding.number"
+          name="number"
+        />
+      </div>
+      <div class="form-group">
+        <label for="postCode">PostCode</label>
+        <input
+          type="text"
+          class="form-control"
+          id="postCode"
+          [(ngModel)]="currentBuilding.postCode"
+          name="postCode"
+        />
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input
+          type="text"
+          class="form-control"
+          id="city"
+          [(ngModel)]="currentBuilding.city"
+          name="city"
+        />
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input
+          type="text"
+          class="form-control"
+          id="country"
+          [(ngModel)]="currentBuilding.country"
+          name="country"
+        />
+      </div>
+      <div class="form-group">
+        <label for="longitude">Longitude</label>
+        <input
+          type="text"
+          class="form-control"
+          id="longitude"
+          [(ngModel)]="currentBuilding.longitude"
+          name="longitude"
+        />
+      </div>
+      <div class="form-group">
+        <label for="latitude">Latitude</label>
+        <input
+          type="text"
+          class="form-control"
+          id="latitude"
+          [(ngModel)]="currentBuilding.latitude"
+          name="latitude"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentBuilding.description"
+          name="description"
+        />
+      </div>
+    </form>
+
+    <button class="badge badge-danger mr-2" (click)="deleteBuilding()">
+      Delete
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateBuilding()"
+    >
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentBuilding.id">
+    <br />
+    <p>Cannot access this Building...</p>
+  </div>
+</div>

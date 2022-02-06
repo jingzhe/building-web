@@ -1,0 +1,131 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="id">Id</label>
+        <input
+          type="text"
+          class="form-control"
+          id="id"
+          required
+          [(ngModel)]="building.id"
+          name="id"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          required
+          [(ngModel)]="building.name"
+          name="name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="street">Street</label>
+        <input
+          type="text"
+          class="form-control"
+          id="street"
+          required
+          [(ngModel)]="building.street"
+          name="street"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="number">Number</label>
+        <input
+          type="text"
+          class="form-control"
+          id="number"
+          required
+          [(ngModel)]="building.number"
+          name="number"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="postCode">PostCode</label>
+        <input
+          type="text"
+          class="form-control"
+          id="postCode"
+          required
+          [(ngModel)]="building.postCode"
+          name="postCode"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input
+          type="text"
+          class="form-control"
+          id="city"
+          required
+          [(ngModel)]="building.city"
+          name="city"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input
+          type="text"
+          class="form-control"
+          id="country"
+          required
+          [(ngModel)]="building.country"
+          name="country"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="longitude">Longitude</label>
+        <input
+          type="text"
+          class="form-control"
+          id="longitude"
+          required
+          [(ngModel)]="building.longitude"
+          name="longitude"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="latitude">Latitude</label>
+        <input
+          type="text"
+          class="form-control"
+          id="latitude"
+          required
+          [(ngModel)]="building.latitude"
+          name="latitude"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="building.description"
+          name="description"
+        />
+      </div>
+
+      <button (click)="saveBuilding()" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>Building was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newBuilding()">Add</button>
+    </div>
+  </div>
+</div>
