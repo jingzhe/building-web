@@ -13,6 +13,12 @@ export class BuildingsListComponent implements OnInit {
   currentBuilding: Building = {};
   currentIndex = -1;
   name = '';
+  city = '';
+  street = '';
+  limit = 100;
+  offset = 0;
+  sortBy = '';
+  order = 'asc'
 
   constructor(private buildingService: BuildingService) { }
 
@@ -43,23 +49,11 @@ export class BuildingsListComponent implements OnInit {
     this.currentIndex = index;
   }
 
-  removeAllBuildings(): void {
-    this.buildingService.deleteAll()
-      .subscribe(
-        response => {
-          console.log(response);
-          this.refreshList();
-        },
-        error => {
-          console.log(error);
-        });
-  }
-
-  searchByName(): void {
+  search(): void {
     this.currentBuilding = {};
     this.currentIndex = -1;
 
-    this.buildingService.findByName(this.name)
+    this.buildingService.findBy(this.name, this.city, this.street, this.limit, this.offset, this.sortBy, this.order)
       .subscribe(
         data => {
           this.buildings = data;

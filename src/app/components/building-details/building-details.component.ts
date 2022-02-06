@@ -15,7 +15,7 @@ export class BuildingDetailsComponent implements OnInit {
     name: '',
     street: '',
     number: 0,
-    postCode: '',
+    post_code: '',
     city: '',
     country: '',
     longitude: 0,

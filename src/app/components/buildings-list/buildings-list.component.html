@@ -1,17 +1,67 @@
 <div class="list row">
   <div class="col-md-8">
     <div class="input-group mb-3">
+      <div class="input-group mb-3">
       <input
         type="text"
         class="form-control"
         placeholder="Search by name"
         [(ngModel)]="name"
       />
+    </div>
+    <div class="input-group mb-3">
+      <input
+      type="text"
+      class="form-control"
+      placeholder="Search by city"
+      [(ngModel)]="city"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <input
+      type="text"
+      class="form-control"
+      placeholder="Search by street"
+      [(ngModel)]="street"
+      />   
+    </div> 
+    <div class="input-group mb-3">
+      <input
+      type="text"
+      class="form-control"
+      placeholder="Search limit"
+      [(ngModel)]="limit"
+      />  
+    </div>  
+    <div class="input-group mb-3">
+      <input
+      type="text"
+      class="form-control"
+      placeholder="Search offset"
+      [(ngModel)]="offset"
+      />  
+    </div>     
+    <div class="input-group mb-3"> 
+      <input
+      type="text"
+      class="form-control"
+      placeholder="Sort by"
+      [(ngModel)]="sortBy"
+      />
+    </div>
+    <div class="input-group mb-3"> 
+      <input
+      type="text"
+      class="form-control"
+      placeholder="Order"
+      [(ngModel)]="order"
+      />
+    </div>  
       <div class="input-group-append">
         <button
           class="btn btn-outline-secondary"
           type="button"
-          (click)="searchByName()"
+          (click)="search()"
         >
           Search
         </button>
@@ -31,9 +81,6 @@
       </li>
     </ul>
 
-    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllBuildings()">
-      Remove All
-    </button>
   </div>
   <div class="col-md-6">
     <div *ngIf="currentBuilding.id">

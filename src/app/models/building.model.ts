@@ -3,7 +3,7 @@ export class Building {
   name?: string;
   street?: string;
   number?: number;
-  postCode?: string;
+  post_code?: string;
   city?: string;
   country?: string;
   longitude?: number;
